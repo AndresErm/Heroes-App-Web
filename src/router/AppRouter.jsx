@@ -7,21 +7,20 @@ import { MarvelPage } from "../heroes/pages/MarvelPage";
 import { Navbar } from "../ui/components/Navbar";
 
 const AppRouter = () => {
-    return(
-        <>
+  return (
+    <>
+      <Navbar />
 
-            <Navbar/>
+      <Routes>
+        <Route path="marvel" element={<MarvelPage />} />
+        <Route path="dc" element={<DcPages />} />
 
-            <Routes>  
-                <Route path="marvel" element={ <MarvelPage/> } />
-                <Route path="dc" element={ <DcPages/> } />
+        <Route path="login" element={<LoginPage />} />
 
-                <Route path="login" element={ <LoginPage/> } />
-
-                <Route path="/" element={ <Navigate to="/marvel" /> } />
-            </Routes>
-        </>
-    )
-}
+        <Route path="/" element={<Navigate to="/marvel" />} />
+      </Routes>
+    </>
+  );
+};
 
 export { AppRouter };
