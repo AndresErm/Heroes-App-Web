@@ -1,4 +1,5 @@
 import React from "react";
+import { HeroeList } from '../components/HeroeList'
 
 const DcPages = () => {
     
@@ -6,7 +7,10 @@ const DcPages = () => {
 
         <> 
         
-            <h1> DcPages  </h1>
+            <h1> Dc Page </h1>
+            <hr />
+            <HeroeList publisher= 'DC Comics' />        
+
         
         </>
     )
