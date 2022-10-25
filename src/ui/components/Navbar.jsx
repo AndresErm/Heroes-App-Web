@@ -6,7 +6,6 @@ const Navbar = () => {
   const navigate = useNavigate();
 
 
-
   const onLogout = () => {
     navigate('/login', {
       replace: true,

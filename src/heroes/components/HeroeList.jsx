@@ -1,5 +1,6 @@
 import React from "react";
 import {getHeroesByPublisher} from '../helpers/getHeroesByPublisher';
+import { HeroCard } from "./HeroCard";
 
 
 const HeroeList = ( { publisher } ) => {
@@ -11,9 +12,10 @@ const HeroeList = ( { publisher } ) => {
             <div className="row rows-cols-1 row-cols-sm-3 g-3 ">
                {
                 heroes.map( hero => ( 
-                    <li key={ hero.id }>
-                        { hero.superhero }
-                    </li>
+                    <HeroCard
+                        key={ hero.id }
+                        { ...hero }
+                    />
                 ))
                }
 
